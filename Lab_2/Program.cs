@@ -10,39 +10,60 @@ namespace Lab_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("PLease enter an integer between 1 and 100");
-            int input = Convert.ToInt32(Console.ReadLine());
-
-
-            if ((input % 2) != 0)
-            {
-                Console.WriteLine("Odd");
-
-            }
-
-            else if((input % 2) == 0 && input >=2 && input <= 25)
-            {
-                Console.WriteLine("Even and less than 25");
-            }
             
-            else if((input % 2) == 0 && input >= 26 && input <= 60)
+            bool run = true;
+
+            do
             {
-                Console.WriteLine("Even");
-            }
 
-            else if ((input % 2) == 0 && input >= 60)
-            {
-                Console.WriteLine(input + "Even");
-            }
+                Console.Write("Please enter an integer between 1 and 100: ");
+                int input = Convert.ToInt32(Console.ReadLine());
 
-            else if ((input % 2) != 0 && input >= 60)
-            {
-                Console.WriteLine(input + "Odd");
-            }
+                Console.Write("\n");
+                Console.Write("Output: ");
+
+                if ((input % 2) != 0)
+                {
+                    Console.Write("Odd");
+
+                }
+                else if ((input % 2) == 0 && input >= 2 && input <= 25)
+                {
+                    Console.Write("Even and less than 25");
+                }
+
+                else if ((input % 2) == 0 && input >= 26 && input <= 60)
+                {
+                    Console.Write("Even");
+                }
+
+                else if ((input % 2) == 0 && input >= 60)
+                {
+                    Console.Write(input + " Even");
+                }
+
+                else if ((input % 2) != 0 && input >= 60)
+                {
+                    Console.Write(input + " Odd");
+                }
+
+                Console.WriteLine("\n");
+                Console.WriteLine("\n");
+
+                Console.Write("Do you want to continue? (y/n) ");
+                string t = Console.ReadLine();
+                if (t.ToLower() == "n")
+                {
+                    Console.WriteLine("\n");
+                    Console.WriteLine("Bye!");
+                    Console.ReadKey();
+                }
+                    run = false;
+
+                Console.WriteLine("\n");
+            } while (run);
 
 
-
-            Console.ReadKey();
         }
     }
 }
