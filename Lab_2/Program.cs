@@ -24,6 +24,22 @@ namespace Lab_2
             {
                 Console.WriteLine("Even and less than 25");
             }
+            
+            else if((input % 2) == 0 && input >= 26 && input <= 60)
+            {
+                Console.WriteLine("Even");
+            }
+
+            else if ((input % 2) == 0 && input >= 60)
+            {
+                Console.WriteLine(input + "Even");
+            }
+
+            else if ((input % 2) != 0 && input >= 60)
+            {
+                Console.WriteLine(input + "Odd");
+            }
+
 
 
             Console.ReadKey();
