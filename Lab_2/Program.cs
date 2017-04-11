@@ -15,7 +15,6 @@ namespace Lab_2
 
             do
             {
-
                 Console.Write("Please enter an integer between 1 and 100: ");
                 int input = Convert.ToInt32(Console.ReadLine());
 
@@ -50,20 +49,19 @@ namespace Lab_2
                 Console.WriteLine("\n");
                 Console.WriteLine("\n");
 
-                Console.Write("Do you want to continue? (y/n) ");
+                Console.Write("Do you want to continue?(y/n) ");
                 string t = Console.ReadLine();
                 if (t.ToLower() == "n")
-                {
-                    Console.WriteLine("\n");
-                    Console.WriteLine("Bye!");
-                    Console.ReadKey();
-                }
-                    run = false;
+             
+                run = false;
 
                 Console.WriteLine("\n");
-            } while (run);
 
-
+            } while (run );
+                
+                Console.WriteLine("Bye!");
+                Console.ReadKey();
+           
         }
     }
 }
